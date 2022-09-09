@@ -33,7 +33,7 @@ main {
   text-align: center;
   font-size: 20px;
   width: 400px;
-  height: 585px;
+  height: 640px;
   background-color: white;
 }
 
@@ -48,6 +48,7 @@ img {
   border-radius: 50%;
   border: 3px solid #8E7C93;
   margin-top: 2px;
+
 }
 
 #name {
@@ -97,4 +98,64 @@ img {
 
 #contact > p:last-child {
   background-color: #8E7C93;
+}
+
+@media only screen and (min-width: 768px) {
+
+  main {
+    text-align: left;
+    width: 800px;
+    height: 510px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "status name"
+    "img occupation"
+    "img brand"
+    "contact offer";
+  }
+
+  #status {
+    grid-area: status;
+    justify-content: flex-start;
+  }
+
+  img {
+    grid-area: img;
+    margin: auto;
+    width: 80%;
+
+  }
+  
+  #name {
+    grid-area: name;
+  }
+  
+  #occupation {
+    grid-area: occupation;
+  
+  }
+  
+  #brand{
+    grid-area: brand;
+    display:  inline-block;
+  }
+  
+  #offer {
+    grid-area: offer;
+    height: fit-content;
+  
+  }
+  #offer > p {
+    margin: 10px;
+
+  }
+  
+  #contact {
+    grid-area: contact;
+    height: fit-content;
+
+  }
 }
